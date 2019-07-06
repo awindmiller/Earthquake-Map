@@ -95,9 +95,9 @@ function getColor(mag) {
     return  mag < 1 ? '#f5c542' :
            mag < 3  ? '#f59c42' :
            mag < 5  ? '#f56942' :
-           mag < 7   ? '#f55442' :
-           mag < 9   ? '#FEB24C' :
-           mag < 10   ? '#FED976': 
+           mag < 7   ? '#FF6833' :
+           mag < 9   ? '#FE4212' :
+           mag < 10   ? '#F70000': 
            '#FED976';
                     }  
 var legend = L.control({position: 'bottomright'});
@@ -105,7 +105,7 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 1, 3, 5, 7, 9, 10],
+        grades = [0, 1, 3, 5, 7, 8],
         labels = [];
 div.innerHTML += 'Earquake Magnitudes <hr>'
     // loop through our density intervals and generate a label with a colored square for each interval
